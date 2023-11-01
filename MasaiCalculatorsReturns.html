@@ -63,62 +63,54 @@
 <body>
   <h1>Masai Calculator</h1>
   <div id="mainbox">
-    <div id="input"></div>
+    <input type="text" id="input" disabled>
     <div id="container">
+      <div onclick="appendToInput('1')"><p>1</p></div>
+      <div onclick="appendToInput('2')"><p>2</p></div>
+      <div onclick="appendToInput('3')"><p>3</p></div>
+      <div onclick="appendToInput('+')" style="background-color: black; color: white;"><p>+</p></div>
 
-      <div>
-        <p>1</p>
-      </div>
-      <div>
-        <p>2</p>
-      </div>
-      <div>
-        <p>3</p>
-      </div>
-      <div style="background-color: black; color: white;">
-        <p>+</p>
-      </div>
+      <div onclick="appendToInput('4')"><p>4</p></div>
+      <div onclick="appendToInput('5')"><p>5</p></div>
+      <div onclick="appendToInput('6')"><p>6</p></div>
+      <div onclick="appendToInput('-')" style="background-color: black; color: white;"><p>-</p></div>
 
-      <div>
-        <p>4</p>
-      </div>
-      <div>
-        <p>5</p>
-      </div>
-      <div>
-        <p>6</p>
-      </div>
-      <div style="background-color: black; color: white;">
-        <p>-</p>
-      </div>
+      <div onclick="appendToInput('7')"><p>7</p></div>
+      <div onclick="appendToInput('8')"><p>8</p></div>
+      <div onclick="appendToInput('9')"><p>9</p></div>
+      <div onclick="appendToInput('*')" style="background-color: black; color: white;"><p>x</p></div>
 
-      <div>
-        <p>7</p>
-      </div>
-      <div>
-        <p>8</p>
-      </div>
-      <div>
-        <p>9</p>
-      </div>
-      <div style="background-color: black; color: white;">
-        <p>x</p>
-      </div>
-
-      <div style="background-color: red; color: white;">
-        <p>C</p>
-      </div>
-      <div>
-        <p>0</p>
-      </div>
-      <div style="background-color: black; color: white;">
-        <p>=</p>
-      </div>
-      <div style="background-color: black; color: white;">
-        <p>/</p>
-      </div>
+      <div onclick="clearInput()" style="background-color: red; color: white;"><p>C</p></div>
+      <div onclick="appendToInput('0')"><p>0</p></div>
+      <div onclick="calculateResult()" style="background-color: black; color: white;"><p>=</p></div>
+      <div onclick="appendToInput('/')" style="background-color: black; color: white;"><p>/</p></div>
     </div>
   </div>
+
+  <script>
+    function appendToInput(value) {
+      const inputField = document.getElementById('input');
+      inputField.value += value;
+    }
+
+    function clearInput() {
+      const inputField = document.getElementById('input');
+      inputField.value = '';
+    }
+
+    function calculateResult() {
+      const inputField = document.getElementById('input');
+      try {
+        const result = eval(inputField.value);
+        inputField.value = result;
+      } catch (error) {
+        inputField.value = 'Error';
+      }
+    }
+  </script>
 </body>
+
+</html>
+
 
 </html>
