@@ -1,0 +1,124 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Masai calculator</title>
+
+  <style>
+    body {
+      width: 20%;
+      height: 20%;
+      margin: auto;
+    }
+
+    h1 {
+      text-align: center;
+      color: rgb(58, 193, 242);
+    }
+
+    #container {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: repeat(4, auto);
+      gap: 10px;
+      margin-top: 20px;
+    }
+
+    #container>div {
+      background-color: rgb(255, 255, 255);
+      border-radius: 10px;
+      box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+      display: grid;
+      place-items: center;
+    }
+
+    p {
+      font-size: large;
+      font-weight: 800;
+
+
+    }
+
+    #mainbox {
+      box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+      padding: 30px;
+      border-radius: 5px;
+      height: 50%;
+      margin-top: 50px;
+
+    }
+
+    #input {
+      box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+      border-radius: 10px;
+      width: auto;
+      height: 60px;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Masai Calculator</h1>
+  <div id="mainbox">
+    <div id="input"></div>
+    <div id="container">
+
+      <div>
+        <p>1</p>
+      </div>
+      <div>
+        <p>2</p>
+      </div>
+      <div>
+        <p>3</p>
+      </div>
+      <div style="background-color: black; color: white;">
+        <p>+</p>
+      </div>
+
+      <div>
+        <p>4</p>
+      </div>
+      <div>
+        <p>5</p>
+      </div>
+      <div>
+        <p>6</p>
+      </div>
+      <div style="background-color: black; color: white;">
+        <p>-</p>
+      </div>
+
+      <div>
+        <p>7</p>
+      </div>
+      <div>
+        <p>8</p>
+      </div>
+      <div>
+        <p>9</p>
+      </div>
+      <div style="background-color: black; color: white;">
+        <p>x</p>
+      </div>
+
+      <div style="background-color: red; color: white;">
+        <p>C</p>
+      </div>
+      <div>
+        <p>0</p>
+      </div>
+      <div style="background-color: black; color: white;">
+        <p>=</p>
+      </div>
+      <div style="background-color: black; color: white;">
+        <p>/</p>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
