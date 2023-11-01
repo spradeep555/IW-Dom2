@@ -7,19 +7,20 @@
     <title>Document</title>
   </head>
   <body>
-    <h1>Masai School</h1>
+    <h1 id="text">Masai School</h1>
     <button onClick="changeRed()">Change Text color to red</button>
     <button onClick="changeYellow()">Change Text color to yellow</button>
   </body>
+
+  <script>
+    function changeRed() {
+      const textElement = document.getElementById("text");
+      textElement.style.color = "red";
+    }
+
+    function changeYellow() {
+      const textElement = document.getElementById("text");
+      textElement.style.color = "yellow";
+    }
+  </script>
 </html>
-
-<script>
-
-  function changeRed(){
-    // change text color of h1 to red
-  }
-
-  function changeYellow(){
-    // change text color of h1 to yellow
-  }
-</script>
